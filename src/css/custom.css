@@ -1,0 +1,86 @@
+/**
+ * GnosisEngine AI Knowledge Base Styles
+ */
+
+/* Base Infima color palette */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Grid & Gradient background variables */
+  --bg-grid-color: rgba(46, 133, 85, 0.1);
+  --bg-grid-size: 32px;
+  --bg-gradient-glow-1: radial-gradient(circle, rgba(46, 133, 85, 0.14) 0%, transparent 70%);
+  --bg-gradient-glow-2: radial-gradient(circle, rgba(14, 165, 233, 0.12) 0%, transparent 70%);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Dark mode grid & gradient background */
+  --bg-grid-color: rgba(37, 194, 160, 0.12);
+  --bg-gradient-glow-1: radial-gradient(circle, rgba(37, 194, 160, 0.18) 0%, transparent 70%);
+  --bg-gradient-glow-2: radial-gradient(circle, rgba(56, 189, 248, 0.14) 0%, transparent 70%);
+}
+
+/* Prevent elastic bounce scrolling stretching on macOS & mobile */
+html,
+body {
+  overscroll-behavior-y: none;
+}
+
+/* Make inner layout containers transparent so root HTML grid and gradients display */
+body,
+#__docusaurus,
+.main-wrapper {
+  background-color: transparent !important;
+}
+
+/* 1. Full-screen grid & stiff radial gradient background on root HTML */
+html {
+  background-color: var(--ifm-background-color) !important;
+  background-image: 
+    var(--bg-gradient-glow-1),
+    var(--bg-gradient-glow-2),
+    linear-gradient(to right, var(--bg-grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--bg-grid-color) 1px, transparent 1px) !important;
+  background-size: 700px 700px, 700px 700px, var(--bg-grid-size) var(--bg-grid-size), var(--bg-grid-size) var(--bg-grid-size) !important;
+  background-position: top 5% left 10%, bottom 10% right 10%, 0 0, 0 0 !important;
+  background-repeat: no-repeat, no-repeat, repeat, repeat !important;
+  background-attachment: fixed !important;
+  min-height: 100vh;
+}
+
+/* 2. Mermaid diagram container styling */
+.docusaurus-mermaid-container,
+div.mermaid {
+  background-color: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.docusaurus-mermaid-container svg,
+div.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
