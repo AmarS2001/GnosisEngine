@@ -7,10 +7,10 @@ const config: Config = {
   tagline: 'AI Notes & Interactive MDX Knowledge Engine',
   favicon: 'img/favicon.ico',
 
-  url: 'https://gnosisengine.example.com',
-  baseUrl: '/',
+  url: 'https://AmarS2001.github.io',
+  baseUrl: '/GnosisEngine/',
 
-  organizationName: 'gnosisengine',
+  organizationName: 'AmarS2001',
   projectName: 'GnosisEngine',
 
   onBrokenLinks: 'throw',
