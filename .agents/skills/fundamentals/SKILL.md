@@ -1,5 +1,5 @@
 ---
-name: teach
+name: fundamentals
 description: Builds a structured, from-scratch self-study curriculum on a technical topic, written as Docusaurus MDX docs. Triggers on requests to learn or get notes on a technical topic, e.g. "teach me Kafka" or natural questions like "how does LLM inference work" — infer the topic from phrasing like that.
 ---
 
