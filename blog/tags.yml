@@ -1,19 +1,14 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+gnosisengine:
+  label: GnosisEngine
+  permalink: /gnosisengine
+  description: Notes and posts related to GnosisEngine
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+notes:
+  label: Notes
+  permalink: /notes
+  description: Technical study notes and guides
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
-
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+ai-notes:
+  label: AI Notes
+  permalink: /ai-notes
+  description: AI-generated study curriculums and notes

@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'GnosisEngine',
-  tagline: 'AI Notes & Interactive MDX Knowledge Engine',
+  tagline: 'AI Notes & Interactive Knowledge Engine',
   favicon: 'img/favicon.ico',
 
   url: 'https://AmarS2001.github.io',
@@ -59,6 +59,7 @@ const config: Config = {
         },
         blog: {
           showReadingTime: true,
+          onInlineAuthors: 'ignore',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -87,7 +88,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: '📖 AI Notes & MDX',
+          label: '📖 Notes',
         },
         {to: '/blog', label: '✍️ Journal', position: 'left'},
         {

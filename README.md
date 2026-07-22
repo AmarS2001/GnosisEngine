@@ -1,6 +1,6 @@
 # GnosisEngine
 
-**GnosisEngine** is an AI Notes repository for creating `.mdx` files and rendering them through Docusaurus with interactive Mermaid diagrams, glassmorphism UI, and dark mode support.
+**GnosisEngine** is an AI Notes repository for creating structured study notes and rendering them through Docusaurus with interactive Mermaid diagrams, glassmorphism UI, and dark mode support.
 
 ## Installation
 

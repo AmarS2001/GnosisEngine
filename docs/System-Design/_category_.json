@@ -1,0 +1,11 @@
+{
+  "label": "📐 System Design",
+  "position": 2,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "📐 System Design Overview",
+    "description": "Deep dives into system design architectures, scalability patterns, and trade-offs."
+  }
+}

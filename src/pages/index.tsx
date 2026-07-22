@@ -20,8 +20,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            📖 Explore AI Notes
+            to="/docs">
+            🚀 Start Learning
           </Link>
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title={`${siteConfig.title} - AI Notes Engine`}
-      description="AI Notes Engine built with Docusaurus, MDX, and Mermaid diagrams.">
+      description="AI Notes Engine built for interactive study notes and architecture diagrams.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

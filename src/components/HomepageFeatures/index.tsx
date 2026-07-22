@@ -11,32 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Structured Self-Study Notes',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Automatically build modular, structured technical study curriculums for complex topics using AGY CLI skills.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Interactive Mermaid Visuals',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Render architecture diagrams, state machines, sequence flows, and system designs directly in MDX notes.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'AGY Skill Pipeline',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Seamlessly generate, edit, and organize documentation inside <code>docs/Fundamentals</code> for fast retrieval.
       </>
     ),
   },
