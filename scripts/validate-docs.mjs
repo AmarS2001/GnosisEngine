@@ -10,7 +10,11 @@ const dom = new JSDOM('<!DOCTYPE html><html><body><div id="graph"></div></body><
 });
 global.window = dom.window;
 global.document = dom.window.document;
-global.navigator = dom.window.navigator;
+try {
+  global.navigator = dom.window.navigator;
+} catch {
+  Object.defineProperty(global, 'navigator', { value: dom.window.navigator, configurable: true, writable: true });
+}
 
 const domPurifyMock = {
   addHook: () => {},
