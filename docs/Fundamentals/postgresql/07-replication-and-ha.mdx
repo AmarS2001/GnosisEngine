@@ -117,7 +117,7 @@ flowchart TD
     end
 
     Proxy -->|Routes WRITEs| Node1
-    Node1 <-->|Heartbeat / Lease| ETCD
+    Node1 <-->|"Heartbeat / Lease"| ETCD
     Node2 <-->|Health Check| ETCD
     Node3 <-->|Health Check| ETCD
 ```

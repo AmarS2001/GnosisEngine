@@ -52,12 +52,12 @@ flowchart TD
     end
 
     C1 -->|TCP Connection| PM
-    PM -->|fork() Backend| BE1
+    PM -->|"fork() Backend"| BE1
     C2 -->|TCP Connection| PM
-    PM -->|fork() Backend| BE2
+    PM -->|"fork() Backend"| BE2
 
-    BE1 <-->|Read / Write 8KB Pages| SB
-    BE2 <-->|Read / Write 8KB Pages| SB
+    BE1 <-->|"Read / Write 8KB Pages"| SB
+    BE2 <-->|"Read / Write 8KB Pages"| SB
     BE1 -->|Append Logs| WB
     BE2 -->|Append Logs| WB
 

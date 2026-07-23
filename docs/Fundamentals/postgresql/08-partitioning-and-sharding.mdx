@@ -28,9 +28,9 @@ Declarative Partitioning splits a large logical table into smaller physical chil
 flowchart TD
     Parent["📦 Logical Parent Table: metrics (Partition Key: recorded_at)"]
     
-    Parent -->|Range: 2026-01| P1["📄 Child 1: metrics_y2026m01 (Heap File)"]
-    Parent -->|Range: 2026-02| P2["📄 Child 2: metrics_y2026m02 (Heap File)"]
-    Parent -->|Range: 2026-03| P3["📄 Child 3: metrics_y2026m03 (Heap File)"]
+    Parent -->|"Range: 2026-01"| P1["📄 Child 1: metrics_y2026m01 (Heap File)"]
+    Parent -->|"Range: 2026-02"| P2["📄 Child 2: metrics_y2026m02 (Heap File)"]
+    Parent -->|"Range: 2026-03"| P3["📄 Child 3: metrics_y2026m03 (Heap File)"]
     Parent -->|Catch-all| PDef["📄 Default Child: metrics_default (Heap File)"]
 ```
 

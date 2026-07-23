@@ -43,7 +43,7 @@ flowchart TD
 
     Clients -->|TCP Connections| PM
     PM -->|Fork Backend| BE
-    BE <-->|Read / Write Blocks| SB
+    BE <-->|"Read / Write Blocks"| SB
     SB <-->|Flush Dirty Pages| Heap
     BE -->|Write Changes| WAL
     BE <-->|Index Scans| Idx
