@@ -106,10 +106,11 @@ Body contents, in this order:
 3. **Visuals** — two kinds, used for different jobs, both allowed in the
    same file:
    - **Mermaid diagrams** for anything you are explaining yourself:
-     architecture, data flow, sequence/timing, state machines. Emojis are
-     welcome inside node labels where they aid quick recognition (e.g.
-     `📥 Producer`, `🗄️ Broker`, `📤 Consumer`) — use them as visual anchors,
-     not decoration on every node.
+     architecture, data flow, sequence/timing, state machines.
+     **Strict Mermaid Rules**:
+     - Use ONLY valid, standard diagram types (`flowchart TD`, `flowchart LR`, `graph TD`, `graph LR`, `sequenceDiagram`, `stateDiagram-v2`, `erDiagram`, `classDiagram`). NEVER use made-up types like `decisionTree` — use `flowchart TD` instead.
+     - Always double-quote node labels containing special characters, colons, slashes, or parentheses: `A["Label (Extra Info)"]` or `B{"Is valid?"}`.
+     - Emojis are welcome inside node labels where they aid quick recognition (e.g. `📥 Producer`, `🗄️ Broker`, `📤 Consumer`).
    - **Real images** for anything better shown than redrawn: official
      architecture diagrams from the project's own docs, real console/UI
      screenshots, published benchmark charts. Search the web for these,
@@ -130,7 +131,7 @@ Body contents, in this order:
 6. **🔀 How it compares to alternatives** (where relevant)
 7. **✅ Cheat-sheet / quick reference** at the end
 8. Navigation footer: `← Previous | Index | Next →` linking the actual
-   files (use their `id`, e.g. `[← Previous](./00-index)`)
+   files using their full doc `id` matching their numeric slug (e.g. `[← Previous](./01-type-system-and-memory)` and `[Index](./index)`).
 
 ## Step 5 — Wrap up
 After all files are written, print a short summary in chat: the folder
@@ -141,6 +142,8 @@ file contents into chat — the user will read the files directly.
 - Output is MDX (`.mdx`), not `.md` — the project is a Docusaurus site.
   Keep MDX-safe syntax: no stray `<` or `{` outside code fences (MDX parses
   them as JSX/expressions), and don't rely on raw HTML unless necessary.
+- **YAML Frontmatter**: ALWAYS enclose `title` and `description` in double quotes `"` in frontmatter (e.g., `title: "⚡ Concurrency: Goroutines & Channels"`). Colons `:` or special characters without quotes trigger YAML parsing errors during Docusaurus builds.
+- **Module IDs & Slugs**: Set frontmatter `id:` in each module file to match its full filename slug (e.g. `id: 01-type-system-and-memory`, `id: 02-structs-interfaces-polymorphism`). For `00-index.mdx`, use `id: index` (and `link: { "type": "doc", "id": "index" }` in `_category_.json`).
 - Mermaid rendering in Docusaurus requires `@docusaurus/theme-mermaid`
   enabled in `docusaurus.config.js` (`markdown: { mermaid: true }` and the
   theme added) — mention this once in the top-level summary if it isn't

@@ -1,0 +1,77 @@
+---
+id: index
+title: "🧭 Golang (Go) — Overview"
+sidebar_position: 0
+description: "Comprehensive fundamentals and architecture curriculum for Go (Golang), calibrated for senior engineers."
+---
+
+# 🧭 Golang (Go) — Overview & Curriculum Map
+
+## 🎯 What Problem Go Solves
+
+Go was created at Google by **Rob Pike**, **Ken Thompson**, and **Robert Griesemer** to solve a specific set of software engineering pain points in massive, multi-threaded C++ and Java codebases:
+1. **Compilation Latency**: Eliminating long build times with a single-pass compiler and strict dependency resolution.
+2. **Uncontrolled Concurrency Complexity**: Replacing manual OS thread management, mutex locks, and callbacks with built-in **Communicating Sequential Processes (CSP)** concurrency (Goroutines and Channels).
+3. **Over-Engineered Type Hierarchies**: Replacing classical class-based inheritance and brittle virtual method tables with **implicit structural interfaces** and composition.
+4. **Deployment Friction**: Eliminating dynamic link/runtime dependency hell by producing statically linked, zero-dependency single binaries with ultra-fast startup times.
+
+Go trades compiler magic and deep meta-programming abstractions for **simplicity, readability, runtime performance, and massive developer velocity**.
+
+---
+
+## 📋 Assumed Background
+
+This curriculum assumes you are a **senior software engineer** with strong foundations in:
+- General Computer Science principles (data structures, algorithms, memory layout, stacks, heaps, pointers).
+- Multi-threading concepts (CPU scheduling, race conditions, atomic operations, lock contention).
+- Basic networking and OS fundamentals (syscalls, file descriptors, sockets, epoll/kqueue).
+
+You do **not** need any prior experience with Go syntax, the Go runtime (GMP), or Go tooling.
+
+---
+
+## 🗺️ Curriculum Structure & Module Index
+
+| # | Module | Core Topics & Key Concepts | Est. Time |
+|---|---|---|---|
+| **01** | [🧱 Type System, Memory Layout & Pointers](./01-type-system-and-memory) | Slices, Maps, Pointer semantics, Stack vs Heap, Escape Analysis | 45 mins |
+| **02** | [🧩 Structs, Interfaces & Structural Polymorphism](./02-structs-interfaces-polymorphism) | Composition, Method Sets, Implicit Interfaces, `iface`/`eface` internals | 50 mins |
+| **03** | [🚨 Error Handling, Panic & Recovery](./03-error-handling-patterns) | Errors as values, Wrapping (`%w`), `errors.Is`/`As`, `defer`, `panic`/`recover` | 40 mins |
+| **04** | [⚡ Concurrency: Goroutines, Channels & CSP](./04-concurrency-goroutines-channels) | CSP Model, Goroutine stack growth, `hchan` queue, `select` mechanics | 60 mins |
+| **05** | [🔒 Synchronization Primitives & Context Propagation](./05-sync-and-context) | `sync.Mutex`, `RWMutex`, `WaitGroup`, `Pool`, `atomic`, `context.Context` trees | 50 mins |
+| **06** | [⚙️ Go Runtime: GMP Scheduler & Memory Management](./06-runtime-gmp-and-gc) | G/M/P state machine, Work stealing, Tri-color concurrent GC, `GOGC`, `GOMEMLIMIT` | 60 mins |
+| **07** | [🧬 Generics & Type Constraints](./07-generics-and-type-constraints) | Type parameters, Constraints (`comparable`, `any`), `~` union sets, GCShape stenciling | 40 mins |
+| **08** | [🛠️ Standard Library, Modules & Toolchain](./08-stdlib-modules-and-toolchain) | `go.mod`, Minimal Version Selection, `net/http` (1.22+ routing), `log/slog`, `io` | 50 mins |
+| **09** | [🧪 Testing, Benchmarking & Performance Profiling](./09-testing-profiling-and-benchmarking) | Table-driven tests, `b.N` benchmarks, Fuzzing, `-race` detector, `pprof`, `trace` | 50 mins |
+| **10** | [🚀 Production Architecture & Language Comparisons](./10-production-patterns-and-comparisons) | Functional options, Graceful shutdown, `internal/` boundary, Go vs Rust/Java/C++ | 45 mins |
+
+---
+
+## ⏱️ Study Plan & Total Estimate
+
+- **Total Reading & Practical Time**: ~8.5 Hours
+- **Fast Track (Core Syntax & Concurrency)**: Modules 01, 02, 04, 05 (~3.5 Hours)
+- **Deep Architecture Track (Runtime, GC & Internals)**: Modules 04, 05, 06, 09 (~3.5 Hours)
+
+---
+
+## 📖 Core Glossary
+
+| Term | Definition |
+|---|---|
+| **Goroutine** | A lightweight user-space green thread managed by the Go runtime, starting with a 2 KB growable stack. |
+| **Channel** | A thread-safe FIFO queue used for communication and synchronization between goroutines. |
+| **CSP** | Communicating Sequential Processes — a formal model of concurrency where processes interact via message passing. |
+| **GMP Scheduler** | The Go runtime's M:N scheduler matching **G**oroutines to OS Threads (**M**) via Processor contexts (**P**). |
+| **Escape Analysis** | Compiler analysis that determines whether a variable can be safely allocated on the stack or must escape to the heap. |
+| **Slice Header** | A 24-byte structure (`reflect.SliceHeader`) containing a pointer to a backing array, `len`, and `cap`. |
+| **`iface` / `eface`** | Internal runtime representations of interfaces: `iface` (interface with methods: `itab` + data) and `eface` (`any` / empty interface: `_type` + data). |
+| **Tri-Color GC** | A concurrent mark-and-sweep garbage collection algorithm operating with White, Grey, and Black object states. |
+| **Zero Value** | Default value assigned automatically to uninitialized variables (e.g., `0`, `""`, `false`, `nil`). |
+| **Go Module** | A collection of Go packages stored in a file tree with a `go.mod` file defining version requirements. |
+
+---
+
+## 🚀 Navigation
+
+- **Start Learning**: Proceed to [Module 01: Type System, Memory Layout & Pointers](./01-type-system-and-memory)
