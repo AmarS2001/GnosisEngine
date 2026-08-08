@@ -1,0 +1,11 @@
+{
+  "label": "⚡ Data Structures & Algorithms",
+  "position": 3,
+  "collapsible": true,
+  "collapsed": false,
+  "link": {
+    "type": "generated-index",
+    "title": "⚡ Data Structures & Algorithms (DSA)",
+    "description": "Comprehensive cheatsheets, patterns, and JavaScript implementations for algorithmic problem solving."
+  }
+}

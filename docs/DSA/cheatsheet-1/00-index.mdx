@@ -1,0 +1,54 @@
+---
+id: index
+title: "🧭 LeetCode Patterns Cheatsheet 1 — Overview"
+sidebar_position: 0
+description: "Master 15 game-changing Data Structures & Algorithms patterns in JavaScript for technical interviews."
+---
+
+# 🧭 LeetCode Patterns Cheatsheet 1 — Overview
+
+🎯 **Why this exists:**
+Algorithmic interviews require pattern recognition rather than memorizing individual solutions. This cheatsheet organizes **15 core LeetCode patterns** into structured modules with runnable JavaScript code templates, Mermaid diagrams, complexity analyses, and real-world problem breakdowns.
+
+---
+
+## 📋 Assumed Background
+- **Language:** JavaScript (ES6+ standard features like `Map`, `Set`, Arrow Functions, Destructuring).
+- **Core CS:** Fundamental knowledge of arrays, strings, objects, recursion, and Big-O time/space complexity notation.
+
+---
+
+## 🗺️ Curriculum Table of Contents
+
+| # | Module Slug | Topic | Focus & Key Templates | Est. Time |
+|---|---|---|---|---|
+| 01 | [`01-sliding-window`](./01-sliding-window) | 🪟 Sliding Window | Fixed & Variable size window templates | 35 mins |
+| 02 | [`02-binary-search`](./02-binary-search) | 🔍 Binary Search | Upper/Lower bound, discrete condition search | 30 mins |
+| 03 | [`03-two-pointers`](./03-two-pointers) | 👈👉 Two Pointers | Opposite & Fast/Slow pointer techniques | 30 mins |
+| 04 | [`04-dynamic-programming`](./04-dynamic-programming) | 💎 Dynamic Programming | 1D/2D DP, Memoization vs. Tabulation | 45 mins |
+| 05 | [`05-substring-patterns`](./05-substring-patterns) | 🧵 10-Line Substring Template | Universal substring frequency sliding window | 30 mins |
+| 06 | [`06-string-questions-pattern`](./06-string-questions-pattern) | 🔤 String Questions Pattern | Anagrams, frequency hashing, palindromes | 30 mins |
+| 07 | [`07-graph-for-beginners`](./07-graph-for-beginners) | 🕸️ Graph Fundamentals | Adjacency lists, Topological Sort, DSU | 45 mins |
+| 08 | [`08-dfs-bfs-tree-traversal`](./08-dfs-bfs-tree-traversal) | 🌲 DFS & BFS Tree Traversals | Pre/In/Post-order DFS & Level-order BFS | 35 mins |
+| 09 | [`09-backtracking-pattern`](./09-backtracking-pattern) | 🔄 Backtracking Fundamentals | Choose-Explore-Unchoose decision tree template | 40 mins |
+| 10 | [`10-backtracking-questions`](./10-backtracking-questions) | 🧩 Classic Backtracking | JS implementations of N-Queens, Sudoku, Word Search | 45 mins |
+| 11 | [`11-monotonic-stack`](./11-monotonic-stack) | 🥞 Monotonic Stack | Next Greater/Smaller Element pattern | 35 mins |
+| 12 | [`12-bit-manipulation`](./12-bit-manipulation) | 🔢 Bit Manipulation | Bitwise operators, masks, power of 2, single number | 30 mins |
+| 13 | [`13-bfs-dfs-problems-part1`](./13-bfs-dfs-problems-part1) | 🗺️ Grid BFS & DFS (Part 1) | 2D matrix traversal, directions array, islands | 40 mins |
+| 14 | [`14-bfs-dfs-problems-part2`](./14-bfs-dfs-problems-part2) | 🌊 Advanced Graph BFS/DFS | Multi-source BFS, Bipartite graphs, shortest paths | 40 mins |
+| 15 | [`15-more-dp-patterns`](./15-more-dp-patterns) | 🚀 Advanced DP Patterns | Bitmask DP, Tree DP, Partition DP | 50 mins |
+
+---
+
+## 📖 Key Glossary
+
+- **Sliding Window:** Maintaining a dynamic contiguous subarray window using two pointers (`l` and `r`) to process substring/subarray constraints in $O(N)$ time.
+- **Two Pointers:** Using two indexes iterating towards each other or at different speeds to solve linear array/string problems without nested loops.
+- **Monotonic Stack:** A stack data structure whose elements are strictly increasing or strictly decreasing, enabling $O(N)$ discovery of nearest greater or smaller elements.
+- **Topological Sort:** Linear ordering of vertices in a Directed Acyclic Graph (DAG) such that for every directed edge $u \to v$, node $u$ comes before $v$.
+- **Memoization (Top-Down):** Recursively solving subproblems and caching results in a map or array to avoid redundant calculations.
+- **Tabulation (Bottom-Up):** Iteratively populating a table from base cases up to the target state.
+
+---
+
+[Start Learning: Module 01 — Sliding Window →](./01-sliding-window)
